@@ -1,0 +1,21 @@
+{
+  "name": "testenode",
+  "version": "1.0.0",
+  "description": "Teste de servidor",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/server.js"
+  },
+  "author": "Henrique Barbosa",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "install": "^0.13.0",
+    "knex": "^0.21.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.3"
+  }
+}
