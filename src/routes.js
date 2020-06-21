@@ -1,20 +1,14 @@
 const express = require('express');
 const routes = express.Router();
 
-const SensorController = require('./controllers/SensorController');
+const ProdController = require('./controllers/ProdController');
 
 
-routes.get('/produtos', SensorController.index);
-routes.get('/produtos/last', SensorController.listLast);
-routes.post('/produtos', SensorController.create);
-
-/*
-routes.get('/users',UserController.index);
-routes.get('/user/:id',UserController.constId);
-routes.get('/users/last',UserController.constIdLast);
-routes.post('/users',UserController.create);
-routes.put('/users/:id',UserController.update);
-routes.delete('/users/:id',UserController.delete);
-*/
+routes.get('/produtos', ProdController.index);
+routes.get('/produtos/:cod',ProdController.constCod);
+routes.get('/produto/last', ProdController.listLast);
+routes.post('/produtos', ProdController.create);
+routes.put('/produtos/:cod', ProdController.update);
+routes.delete('/produtos/:cod',ProdController.delete);
 
 module.exports = routes; 
