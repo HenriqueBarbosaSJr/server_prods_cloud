@@ -7,7 +7,7 @@ Projeto de API utilizando NodeJs e Banco de Dados MySQL utilizando uma Query Bui
   Foi utilizado o MySQL, mas com pequenos ajustes é possível utilizar outros bancos de dados como PostgreSQL e SQLite.
 
  
-  Foi desenvolvido rotas do backend
+ 🖥 Foi desenvolvido rotas do backend
   * Listar registros cadastrados
   * Listar registro por cod
   * Listar último registro cadastrados
@@ -15,13 +15,13 @@ Projeto de API utilizando NodeJs e Banco de Dados MySQL utilizando uma Query Bui
   * Alteração de registros de dados
   * Deletar registros
 
-  ### Languages
+ ### 📒 Languages
 
   * Javascript
   * NodeJS
   * SQL
 
-  ### Technologies
+ ### 📡 Technologies
  * knex
  * nodemon
  * express
