@@ -9,7 +9,7 @@ Projeto de API utilizando NodeJs e Banco de Dados MySQL utilizando uma Query Bui
  
  🖥 Foi desenvolvido rotas do backend
   * Listar registros cadastrados
-  * Listar registro por cod
+  * Listar registro por código
   * Listar último registro cadastrados
   * Consultar produtos por nome
   * Consultar produtos por fornecedor
