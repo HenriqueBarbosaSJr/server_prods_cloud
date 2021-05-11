@@ -4,7 +4,7 @@ module.exports = {
 
     async index(req, res){
 
-        const results = await knex('prods');
+        const results = await knex('produtos');
         
         return res.json(results);
     },
@@ -13,7 +13,7 @@ module.exports = {
     async constCod(req, res, next){
         try {
             const { cod } = req.params;
-            const result = await knex ('prods')
+            const result = await knex ('produtos')
             .where({ cod });
             
             return res.json(result);
@@ -25,12 +25,38 @@ module.exports = {
 
     async listLast (req, res, next){
         try {
-            const result = await knex ('prods').orderBy('cod', 'desc').limit(1);
+            const result = await knex ('produtos').orderBy('cod', 'desc').limit(1);
             return res.json(result);
 
         } catch (error) {
             next(error)
         }
+    },
+
+    async searchName(req, res){
+        try{
+            const { nome } = req.params;        
+            const results = await knex('produtos')
+                .where('nome' , 'like' , '%' + nome + '%');
+    
+            return res.json(results);
+        }catch(error){
+            next(error)
+        }
+
+    },
+
+    async searchNameFab(req, res){
+        try{
+            const { nome } = req.params;        
+            const results = await knex('produtos')
+                .where('fabricante' , 'like' , '%' + nome + '%');
+    
+            return res.json(results);
+        }catch(error){
+            next(error)
+        }
+
     },
 
 
@@ -41,7 +67,7 @@ module.exports = {
             const { descri } = req.body;
             const { qtda } = req.body;
             const { fabricante } = req.body;
-            await knex ('prods')
+            await knex ('produtos')
             .insert({ nome , descri, qtda, fabricante });
             
             return res.status(201).send();
@@ -58,7 +84,7 @@ module.exports = {
             const { qtda } = req.body;
             const { fabricante } = req.body;
             const { cod } = req.params;
-            await knex ('prods')
+            await knex ('produtos')
             .update({ nome , descri, qtda, fabricante  })
             .where({ cod });
 
@@ -72,7 +98,7 @@ module.exports = {
     async delete(req, res, next){
         try {
             const { cod } = req.params;
-            await knex ('prods')
+            await knex ('produtos')
             .where({cod })
             .del();
 
