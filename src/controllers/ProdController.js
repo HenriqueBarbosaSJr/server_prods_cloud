@@ -33,7 +33,7 @@ module.exports = {
         }
     },
 
-    async searchName(req, res){
+    async searchName(req, res, next){
         try{
             const { nome } = req.params;        
             const results = await knex('produtos')
@@ -59,9 +59,7 @@ module.exports = {
 
     },
 
-
     async create(req, res, next){
-        
         try{
             const { nome } = req.body;
             const { descri } = req.body;
