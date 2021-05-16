@@ -17,6 +17,11 @@ Projeto de API utilizando NodeJs e Banco de Dados MySQL utilizando uma Query Bui
   * Alteração de registros de dados
   * Deletar registros
 
+
+  * Cadastrar usuários com encriptação de password 
+  * Consultar usuário com password encriptado
+
+
  ### 📒 Languages
 
   * Javascript
@@ -30,6 +35,7 @@ Projeto de API utilizando NodeJs e Banco de Dados MySQL utilizando uma Query Bui
  * MySQL
  * cors
  * morgan
+ * bcrypt
 
   ---
  Made by 💙 by [Henrique Barbosa de Souza Júnior](https://github.com/HenriqueBarbosaSJr)
