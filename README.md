@@ -1,6 +1,6 @@
 # API para consumo de dados MySQL, NodeJs, Sistema Produtos
 
-Projeto de API utilizando NodeJs e Banco de Dados MySQL utilizando uma Query Builder KNEX para consumo de dados do banco ( valores de sensores ).
+Projeto de API utilizando NodeJs e Banco de Dados MySQL utilizando uma Query Builder KNEX para consumo de dados do banco.
 
  
  
@@ -16,10 +16,11 @@ Projeto de API utilizando NodeJs e Banco de Dados MySQL utilizando uma Query Bui
   * Cadastrar registros de dados
   * Alteração de registros de dados
   * Deletar registros
-
-
   * Cadastrar usuários com encriptação de password 
   * Consultar usuário com password encriptado
+  * Autenticar usuários
+  * Rota protegida para cadastro de produtos ( implementação com Middleware ) 
+
 
 
  ### 📒 Languages
@@ -36,6 +37,7 @@ Projeto de API utilizando NodeJs e Banco de Dados MySQL utilizando uma Query Bui
  * cors
  * morgan
  * bcrypt
+ * Jsonwebtoken
 
   ---
  Made by 💙 by [Henrique Barbosa de Souza Júnior](https://github.com/HenriqueBarbosaSJr)
