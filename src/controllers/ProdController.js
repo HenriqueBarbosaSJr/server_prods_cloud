@@ -61,6 +61,7 @@ module.exports = {
 
     async create(req, res, next){
         try{
+            console.log(req.session);
             const { nome } = req.body;
             const { descri } = req.body;
             const { qtda } = req.body;
