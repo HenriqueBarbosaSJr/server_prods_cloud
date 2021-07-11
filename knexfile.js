@@ -5,10 +5,10 @@ module.exports = {
   development: {
     client: 'mysql',
     connection: {
-      host:'',
-      user : '',
-      password : '',
-      database : ''
+      host:'3.130.56.128',
+      user : 'admin',
+      password : 'adm123456',
+      database : 'bancoProd'
     },
 
     migrations:{

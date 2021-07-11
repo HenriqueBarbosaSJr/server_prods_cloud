@@ -13,8 +13,7 @@ module.exports = {
     async constCod(req, res, next){
         try {
             const { cod } = req.params;
-            const result = await knex ('produtos')
-            .where({ cod });
+            const result = await knex ('produtos').where({ cod });
             
             return res.json(result);
 
@@ -33,32 +32,6 @@ module.exports = {
         }
     },
 
-
-    async searchName(req, res){
-         try{
-             const { nome } = req.params; 
-	     const results = await knex('produtos')
-             .where('nome' , 'like' , '%' + nome + '%');
-		
-	      return res.json(results);
-             }catch(error){
-		 next(error)
-	     }
-        },
-
-
-    async searchNameFab(req, res){ 
-	try{ 
-		const { nome } = req.params; 
-		const results = await knex('produtos')
-                .where('fabricante' , 'like' , '%' + nome + '%');
-
-            return res.json(results);
-        }catch(error){
-            next(error)
-        }
-
-      },
 
     async create(req, res, next){
         
